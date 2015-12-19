@@ -9,3 +9,6 @@ graphics.o: ../librairie/graphics.c ../librairie/graphics.h
 	gcc -Wall `sdl-config --cflags`  -c ../librairie/graphics.c
 
 
+clean:
+	rm -f *.o
+	rm -f police.h
