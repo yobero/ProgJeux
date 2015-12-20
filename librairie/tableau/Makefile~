@@ -1,0 +1,2 @@
+tri-tableau.o: tri-tableau.c tri-tableau.h
+	gcc -c tri-tableau.c -o tri-tableau.o

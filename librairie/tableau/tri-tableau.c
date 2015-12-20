@@ -1,7 +1,7 @@
 #define NBMAX 1000
 
 struct tableau {
-	tab[NBMAX];
+	int tab[NBMAX];
 	int taille;
 };
 typedef struct tableau TABLEAU;
@@ -29,5 +29,14 @@ TABLEAU triSelection(TABLEAU T)
 		n++;
 		i=n;
 	}
+	return T;
+}
+
+TABLEAU triInsertion(TABLEAU T)
+{
+	int i=1;
+	int n=0;
+	int tmp;
+	
 	return T;
 }
