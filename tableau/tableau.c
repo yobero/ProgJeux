@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../librairie/tri/tri-tableau.h"
+#include "../librairie/tableau/tri-tableau.h"
 
 #define N 100
 #define NB 500
@@ -13,30 +13,19 @@ int alea ()
 		return valeur;
 }
 
-TABLEAU initialisation()
-{
-	TABLEAU T;
-	T.taille=0;
-	return T;
-}
-
-TABLEAU insertion (TABLEAU T)
+TABLEAU insertionTab (TABLEAU T)
 {
 	int a=0;
+	int b;
 	
 	while(a<NB)
 	{
-		T.tab[taille] = alea();
-		T.taille++;
+		b = alea();
+		T= insertion(T,b);
 		a++;
 	}
 	
 	return T;
-}
-
-void affichageTableau(TABLEAU T)
-{
-	
 }
 
 int main ()
@@ -44,6 +33,10 @@ int main ()
 	srand(time(NULL));
 	TABLEAU T;
 	T=initialisation();
+	T=insertionTab(T);
+	affichage(T);
+	T=triSelection(T);
+	affichage(T);
 	
 	return 0;
 }

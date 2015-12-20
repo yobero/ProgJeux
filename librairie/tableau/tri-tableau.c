@@ -1,10 +1,4 @@
-#define NBMAX 1000
-
-struct tableau {
-	int tab[NBMAX];
-	int taille;
-};
-typedef struct tableau TABLEAU;
+#include "fonctionTab.h"
 
 TABLEAU triSelection(TABLEAU T)
 {

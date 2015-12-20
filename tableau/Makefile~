@@ -15,4 +15,3 @@ run: all
 
 clean:
 	rm -f *.o
-	rm ./tab

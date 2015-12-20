@@ -1,2 +1,5 @@
-tri-tableau.o: tri-tableau.c tri-tableau.h
-	gcc -c tri-tableau.c -o tri-tableau.o
+fonctionTab.o: ../librairie/trableau/fonctionTab.c ../librairie/trableau/fonctionTab.h
+	gcc -c ../librairie/trableau/fonctionTab.c -o fonctionTab.o
+
+tri-tableau.o: ../librairie/trableau/tri-tableau.c ../librairie/trableau/tri-tableau.h fonctionTab.o
+	gcc -c ../librairie/trableau/tri-tableau.c -o tri-tableau.o
