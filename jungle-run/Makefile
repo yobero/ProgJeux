@@ -20,3 +20,4 @@ all: graphics.o jungle-run.o
 clean:
 	rm -f *.o
 	rm -f police.h
+	rm -f jungle-run
