@@ -9,7 +9,7 @@ graphics.o: ../librairie/graphics.c ../librairie/graphics.h
 	gcc -Wall `sdl-config --cflags`  -c ../librairie/graphics.c
 
 #ne pas oublier cette ligne pour la compilarion final
-#`sdl-config --libs` -lm -lSDL_ttf
+#sdl-config --libs` -lm -lSDL_ttf
 
 clean:
 	rm -f *.o
