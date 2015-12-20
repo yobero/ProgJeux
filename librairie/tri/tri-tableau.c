@@ -6,7 +6,7 @@ struct tab {
 };
 typedef struct tab TABLEAU;
 
-TABLEAU triPermutation(TABLEAU T)
+TABLEAU triSelection(TABLEAU T)
 {
 	
 	
