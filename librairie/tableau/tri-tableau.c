@@ -28,9 +28,28 @@ TABLEAU triSelection(TABLEAU T)
 
 TABLEAU triInsertion(TABLEAU T)
 {
-	int i=1;
-	int n=0;
+	//On suppose que le premier indice du tableau est trié
+	int i=2;
+	int n=i-1;//taille du tableau trié
+	int itmp=n;
 	int tmp;
+	
+	while (i<T.taille)
+	{
+		while(T.tab[i]< T.tab[n] && i>0) //localisation de l'insertion
+			i--;
+		tmp=T.tab[itmp+1];
+		while(itmp>i)
+		{
+			T.tab[itmp+1] = T.tab[itmp];
+			itmp++;
+		}
+		T.tab[i] = tmp;
+		
+		n++;
+		i=n+1;
+		itmp=n;
+	}
 	
 	return T;
 }
