@@ -36,8 +36,8 @@ int main ()
 	T=insertionTab(T);
 	affichage(T);
 	printf("apres \n");
-	T=triSelection(T);
-	//T=triInsertion(T);
+	//T=triSelection(T);
+	T=triInsertion(T);
 	affichage(T);
 	
 	return 0;
