@@ -3,8 +3,8 @@
 TABLEAU triSelection(TABLEAU T)
 {
 	int i=0;//deplacement dans le tableau
-	int min = i;//l'indice contenatn la plus petite valeur
-	int n=0;//nb d'élément trié
+	int min = i;//l'indice contenant la plus petite valeur
+	int n=0;//l'indice du dernier element trié
 	int tmp; //variable pour faire l'échange
 
 	while (n<=T.taille)
@@ -16,19 +16,24 @@ TABLEAU triSelection(TABLEAU T)
 			
 			i++;
 		}
+			
 		//échange
-		tmp=T.tab[n];
-		T.tab[n]= T.tab[min];
-		T.tab[min] = tmp;
+		if(min!=i)
+		{
+			tmp=T.tab[n];
+			T.tab[n]= T.tab[min];
+			T.tab[min] = tmp;
+		}
 		n++;
 		i=n;
+		min=i;
 	}
 	return T;
 }
 
 TABLEAU triInsertion(TABLEAU T)
 {
-	//On suppose que le premier indice du tableau est trié
+	//On suppose que la valeur du premier indice du tableau est trié
 	int i=2;
 	int n=i-1;//taille du tableau trié
 	int itmp=n;
@@ -36,10 +41,12 @@ TABLEAU triInsertion(TABLEAU T)
 	
 	while (i<T.taille)
 	{
-		while(T.tab[i]< T.tab[n] && i>0) //localisation de l'insertion
+		while(T.tab[i]<= T.tab[n] && i>n) //localisation de l'insertion
 			i--;
+		
+		//initialisation de la valeur tmp
 		tmp=T.tab[itmp+1];
-		while(itmp>i)
+		while(itmp<i)
 		{
 			T.tab[itmp+1] = T.tab[itmp];
 			itmp++;

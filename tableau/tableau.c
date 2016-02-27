@@ -4,7 +4,7 @@
 #include "../librairie/tableau/tri-tableau.h"
 
 #define N 100
-#define NB 500
+#define NB 5
 
 int alea ()
 {
@@ -35,7 +35,9 @@ int main ()
 	T=initialisation();
 	T=insertionTab(T);
 	affichage(T);
+	printf("apres \n");
 	T=triSelection(T);
+	//T=triInsertion(T);
 	affichage(T);
 	
 	return 0;

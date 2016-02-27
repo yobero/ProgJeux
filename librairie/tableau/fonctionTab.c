@@ -34,14 +34,16 @@ void affichage(TABLEAU T)
 	
 	while(i<T.taille)
 	{
-		printf("%d ",T.tab[i]);
 		if(z==10)
 		{
 			printf("\n");
 			z=0;
 		}
 		else
+		{
+			printf("%d ",T.tab[i]);
 			z++;
+		}
 		i++;
 	}
 	printf("\n");
